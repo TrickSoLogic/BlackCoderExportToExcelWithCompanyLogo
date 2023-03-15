@@ -1,0 +1,23 @@
+﻿Index.cshtml
+
+@model IEnumerable<BlackCoderExportToExcelWithCompanyLogo.Controllers.Person>
+
+<table>
+    <thead>
+        <tr>
+            <th>CopyRights</th>
+            <th>Bid</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td>@person.CopyRights</td>
+                <td>@person.Bid</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("ExportToExcel")">Export to Excel</a>
